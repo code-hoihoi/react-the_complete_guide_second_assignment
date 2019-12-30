@@ -4,13 +4,10 @@ import './App.css';
 import InputField from './InputField/InputField';
 
 class App extends Component {
-  constructor (props){
-    super(props);
-
-    this.state = {
-      textbox: "",
-      len: 0
-    };
+  state = {
+    textbox: "",
+    len: 0,
+    hoihoi: 9
   }
   
   updateLength = (event) => {
@@ -18,13 +15,15 @@ class App extends Component {
     const length = val.length;
     console.log(val);
     console.log(length);
-    this.setState = ({
-      len: length
+    this.setState({
+      hoihoi: length
     })
-    console.log("hoi")
+    console.log(this.state.hoihoi);
   }
 
   render() {
+    const new_len = this.state.len;
+    const new_hoihoi = this.state.hoihoi;
     return (
       <div className="App">
         <header className="App-header">
@@ -37,8 +36,8 @@ class App extends Component {
         <br />
 
         <InputField 
-          len={this.state.len} 
-          changed={this.updateLength}/>
+          len={new_hoihoi} 
+          changed={(event) => this.updateLength(event)}/>
       </div>
     );
   }
