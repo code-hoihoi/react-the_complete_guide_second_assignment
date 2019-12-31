@@ -11,7 +11,7 @@ const InputField = ( props ) => {
                     onChange={props.changed} />
             </p>
             <p>
-                {props.len}
+                {props.length}
             </p>
         </div>
     );

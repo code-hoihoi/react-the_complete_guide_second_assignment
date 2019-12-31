@@ -6,8 +6,7 @@ import InputField from './InputField/InputField';
 class App extends Component {
   state = {
     textbox: "",
-    len: 0,
-    hoihoi: 9
+    length: 0
   }
   
   updateLength = (event) => {
@@ -16,14 +15,13 @@ class App extends Component {
     console.log(val);
     console.log(length);
     this.setState({
-      hoihoi: length
+      length: length
     })
     console.log(this.state.hoihoi);
   }
 
   render() {
-    const new_len = this.state.len;
-    const new_hoihoi = this.state.hoihoi;
+    const new_length = this.state.length;
     return (
       <div className="App">
         <header className="App-header">
@@ -36,7 +34,7 @@ class App extends Component {
         <br />
 
         <InputField 
-          len={new_hoihoi} 
+          length={new_length} 
           changed={(event) => this.updateLength(event)}/>
       </div>
     );
