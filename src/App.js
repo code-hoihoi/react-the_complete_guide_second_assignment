@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import InputField from './InputField/InputField';
+import Validation from './Validation/LengthValidation';
 
 class App extends Component {
   state = {
@@ -36,6 +37,7 @@ class App extends Component {
         <InputField 
           length={new_length} 
           changed={(event) => this.updateLength(event)}/>
+        <Validation length={this.state.length} />
       </div>
     );
   }
