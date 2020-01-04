@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 
 const LengthValidation  = (props) => {
     const MIN_LENGTH = 5;
