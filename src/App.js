@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import InputField from './InputField/InputField';
 import Validation from './Validation/LengthValidation';
-import Character from './Characters/Character'
+import Character from './Characters/Character';
 
 class App extends Component {
   state = {
@@ -12,6 +12,7 @@ class App extends Component {
     characters: []
   }
   
+  // Generate unique id to use it as a key of this.state.characters
   generateUuid = () => {
     let chars = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("");
     for (let i = 0, len = chars.length; i < len; i++) {
@@ -35,11 +36,11 @@ class App extends Component {
     const uniqueId = this.generateUuid();
     const prevLength = this.state.length;
     const chars = [...this.state.characters];
-    const addedCharacter = {id:uniqueId, character: val[length-1]};
     if(prevLength > length) {
       chars.splice(length, 1);
     }
     else if(prevLength < length) {
+      const addedCharacter = {id:uniqueId, character: val[length-1]};
       chars[length-1] = addedCharacter;
     }
     this.setState({
@@ -49,25 +50,26 @@ class App extends Component {
     })
   }
 
-  deleteCharacter = (uniqueId) => {
+  deleteCharacter = (index) => {
     const chars = [...this.state.characters];
-    chars.splice(uniqueId, 1);
+    chars.splice(index, 1);
     this.setState({
       characters: chars
     })
-    console.log(chars)
   }
 
   render() {
     let characters = null;
     if(this.state.characters.length > 0){
+      // assign rendering content to characters variable
       characters = (
         <div>
+          {/* use map function to render array */}
           {this.state.characters.map((char, index) => {
             return <Character
               key={char.id} 
               character={char.character} 
-              click={() => this.deleteCharacter(char.id)} />
+              click={() => this.deleteCharacter(index)} />
           })}
         </div>
       )
