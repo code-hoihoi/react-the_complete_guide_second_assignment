@@ -31,21 +31,19 @@ class App extends Component {
   }
 
   updateLength = (event) => {
-    const val = event.target.value;
-    const length = val.length;
-    const uniqueId = this.generateUuid();
-    const prevLength = this.state.length;
-    const chars = [...this.state.characters];
-    if(prevLength > length) {
-      chars.splice(length, 1);
+    const text = event.target.value;
+    const len = text.length;
+    const chars = [];
+
+    for (let i = 0; i < len; i++) {
+      const uniqueId = this.generateUuid();
+      const addedCharacter = {id:uniqueId, character: text[i]};
+      chars.push(addedCharacter);
     }
-    else if(prevLength < length) {
-      const addedCharacter = {id:uniqueId, character: val[length-1]};
-      chars[length-1] = addedCharacter;
-    }
+    
     this.setState({
-      textbox: val,
-      length: length,
+      textbox: text,
+      length: len,
       characters: chars
     })
   }
