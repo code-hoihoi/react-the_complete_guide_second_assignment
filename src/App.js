@@ -30,22 +30,39 @@ class App extends Component {
     return chars.join("");
   }
 
-  // Update the length displayed below the textbox
-  // Also, update the character components according to the textbox
-  updateLength = (event) => {
+  // Takes care of all updates when textbox value is changed
+  // This is a wrapper method of updates
+  update = (event) => {
     const text = event.target.value;
-    const len = text.length;
+
+    this.updateText(text);
+    this.updateLength(text);
+    this.updateCharComponent(text);
+  }
+
+  updateText = (text) => {
+    this.setState({
+      textbox: text
+    })
+  }
+
+  updateLength = (text) => {
+    this.setState({
+      length: text.length
+    })
+  }
+
+  // Update Character components based on the value of the textbox
+  updateCharComponent = (text) => {
     const chars = [];
 
-    for (let i = 0; i < len; i++) {
+    for (let i = 0; i < text.length; i++) {
       const uniqueId = this.generateUuid();
       const addedCharacter = {id:uniqueId, character: text[i]};
       chars.push(addedCharacter);
     }
 
     this.setState({
-      textbox: text,
-      length: len,
       characters: chars
     })
   }
@@ -97,7 +114,7 @@ class App extends Component {
         <InputField 
           textbox={this.state.textbox} 
           length={this.state.length} 
-          changed={(event) => this.updateLength(event)}/>
+          changed={(event) => this.update(event)}/>
         <Validation length={this.state.length} />
         {characters}
       </div>
