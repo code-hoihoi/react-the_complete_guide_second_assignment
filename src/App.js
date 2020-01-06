@@ -30,6 +30,8 @@ class App extends Component {
     return chars.join("");
   }
 
+  // Update the length displayed below the textbox
+  // Also, update the character components according to the textbox
   updateLength = (event) => {
     const text = event.target.value;
     const len = text.length;
@@ -40,7 +42,7 @@ class App extends Component {
       const addedCharacter = {id:uniqueId, character: text[i]};
       chars.push(addedCharacter);
     }
-    
+
     this.setState({
       textbox: text,
       length: len,
@@ -48,10 +50,19 @@ class App extends Component {
     })
   }
 
+  // Delete a character when a Character component is clicked
+  // This action also deletes the corresponding character in the textbox
   deleteCharacter = (index) => {
     const chars = [...this.state.characters];
     chars.splice(index, 1);
+    const len = chars.length;
+    let text = "";
+    for (let i = 0; i < len; i++) {
+      text = text + chars[i].character;
+    }
     this.setState({
+      textbox: text, 
+      length: len, 
       characters: chars
     })
   }
@@ -59,10 +70,10 @@ class App extends Component {
   render() {
     let characters = null;
     if(this.state.characters.length > 0){
-      // assign rendering content to characters variable
+      // Assign rendering content to characters variable
       characters = (
         <div>
-          {/* use map function to render array */}
+          {/* Use map function to render array */}
           {this.state.characters.map((char, index) => {
             return <Character
               key={char.id} 
@@ -84,6 +95,7 @@ class App extends Component {
         <br />
 
         <InputField 
+          textbox={this.state.textbox} 
           length={this.state.length} 
           changed={(event) => this.updateLength(event)}/>
         <Validation length={this.state.length} />

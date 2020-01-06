@@ -7,7 +7,9 @@ const InputField = ( props ) => {
             <p>
                 
                 Your String: 
-                <input type="text" 
+                <input 
+                    type="text" 
+                    value={props.textbox}
                     onChange={props.changed} />
             </p>
             <p>
