@@ -32,7 +32,7 @@ class App extends Component {
 
   // Takes care of all updates when textbox value is changed
   // This is a wrapper method of updates
-  update = (event) => {
+  handleUpdate = (event) => {
     const text = event.target.value;
 
     this.updateText(text);
@@ -114,7 +114,7 @@ class App extends Component {
         <InputField 
           textbox={this.state.textbox} 
           length={this.state.length} 
-          changed={(event) => this.update(event)}/>
+          changed={(event) => this.handleUpdate(event)}/>
         <Validation length={this.state.length} />
         {characters}
       </div>
