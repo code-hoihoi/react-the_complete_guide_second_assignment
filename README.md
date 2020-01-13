@@ -1,4 +1,5 @@
-This is the second assignment from React - The Complete Guide(incl Hooks, React Router, Redux).
+This is the second assignment from React - The Complete Guide(incl Hooks, React Router, Redux).  
+The course link is https://www.udemy.com/course/react-the-complete-guide-incl-redux/  
 The code presented here is 100% my own work. No copy from other resources or no imitation of tutorials.
 
 The assignment instruction is below.
