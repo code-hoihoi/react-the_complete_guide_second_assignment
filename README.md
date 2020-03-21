@@ -11,6 +11,7 @@ Udemyで提供されている「React - The Complete Guide」コースの１つ�
 5. 1番のテキストボックスに入力された一つ一つの文字を、4番で定義したコンポーネント(CharComponent)でレンダリングする
 6. コンポーネント(CharComponent)はクリックすると消えるようにし、またインプットのテキストボックス内の文字列もその変化に応じて同期をとるように変化する
 
+　
 
 This is the second assignment from React - The Complete Guide(incl Hooks, React Router, Redux).  
 The course link is https://www.udemy.com/course/react-the-complete-guide-incl-redux/  
