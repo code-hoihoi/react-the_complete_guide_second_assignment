@@ -1,3 +1,6 @@
+## React - The Complete Guide 
+### 2番目の課題
+
 Udemyで提供されている「React - The Complete Guide」コースの１つ目の課題です。
 
 インストラクターから実装すべきタスクをリストアップされ、それらを独力で実装しました。
@@ -13,7 +16,8 @@ Udemyで提供されている「React - The Complete Guide」コースの１つ�
 
 実装に際してのヒント: JavaScriptの文字列は基本的には配列である。(キャラクターの配列 = 文字列)
 　
-
+## React - The Complete Guide 
+### The Second Assignment
 This is the second assignment from React - The Complete Guide(incl Hooks, React Router, Redux).  
 The course link is https://www.udemy.com/course/react-the-complete-guide-incl-redux/  
 The code presented here is 100% my own work. No copy from other resources or no imitation of tutorials.
