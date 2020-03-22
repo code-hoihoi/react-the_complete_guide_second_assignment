@@ -1,21 +1,24 @@
 ## React - The Complete Guide 
-### 2番目の課題
+### 課題 \#2
 
-Udemyで提供されている「React - The Complete Guide」コースの１つ目の課題です。
+Udemyで提供されているコース「React - The Complete Guide」の2つ目の課題です。
 
-インストラクターから実装すべきタスクをリストアップされ、それらを独力で実装しました。
-したがって、100%自分で書いたJavaScript/Reactのコードを格納したリポジトリとなります。
+インストラクターから実装すべきタスクをリストアップされ、それらを独力で実装しました。  
+したがって、100%自走して書いたJavaScript/Reactのコードを格納したリポジトリとなります。
 
 実装したタスクは以下のとおり。
 1. インプットのテキストボックスを作成し、入力値をボックスのすぐ下に出力する
 2. テキストの文字数をpropとして受け取る新しい子コンポーネント(ValidationComponent)を定義する
 3. 2番のタスクで定義したコンポーネント(ValidationComponent)に、"文字数が多すぎます/少なすぎます"といったメッセージを動的に表示する
-4. 新たなコンポーネント(CharComponent)を定義し、inline boxとして適切なスタイリングを施す(=> display: inline block, padding: 16px, text-align: center, margin: 16px, border: 1px solid black)
+4. 新たなコンポーネント(CharComponent)を定義し、inline boxとして適切なスタイリングを施す  
+(=> display: inline block, padding: 16px, text-align: center, margin: 16px, border: 1px solid black)
 5. 1番のテキストボックスに入力された一つ一つの文字を、4番で定義したコンポーネント(CharComponent)でレンダリングする
 6. コンポーネント(CharComponent)はクリックすると消えるようにし、またインプットのテキストボックス内の文字列もその変化に応じて同期をとるように変化する
 
+
 実装に際してのヒント: JavaScriptの文字列は基本的には配列である。(キャラクターの配列 = 文字列)
 　
+
 ## React - The Complete Guide 
 ### The Second Assignment
 This is the second assignment from React - The Complete Guide(incl Hooks, React Router, Redux).  
