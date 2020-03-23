@@ -1,10 +1,11 @@
 ## React - The Complete Guide 
 ### 課題 \#2
 
-Udemyで提供されているコース「React - The Complete Guide」の2つ目の課題です。
+Udemyで提供されているコース「[React - The Complete Guide](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)」の2つ目の課題です。
 
 インストラクターから実装すべきタスクをリストアップされ、それらを独力で実装しました。  
-したがって、100%自走して書いたJavaScript/Reactのコードを格納したリポジトリとなります。
+したがって、100%自走して書いたJavaScript/Reactのコードを格納したリポジトリとなり、コース内で提供されている模範解答のコードとはとは別物となります。  
+この「課題 #2」はReactの条件分岐(if)によるレンダリング、リストを使用したコンポーネントの繰り返し(for)によるレンダリングの理解を目的としています。
 
 実装したタスクは以下のとおり。
 1. インプットのテキストボックスを作成し、入力値をボックスのすぐ下に出力する
@@ -23,7 +24,7 @@ Udemyで提供されているコース「React - The Complete Guide」の2つ目
 ### The Second Assignment
 This is the second assignment from React - The Complete Guide(incl Hooks, React Router, Redux).  
 The course link is https://www.udemy.com/course/react-the-complete-guide-incl-redux/  
-The code presented here is 100% my own work. No copy from other resources or no imitation of tutorials.
+The code presented here is 100% my own work. It is neither a copy from other resources nor follow-and-code tutorials.
 
 The assignment instruction is below.
 - Assignment #2 -
